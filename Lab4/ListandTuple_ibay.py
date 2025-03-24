@@ -1,6 +1,6 @@
 import json
 
-# Function to load student records from a file
+#Function to load student records from a file
 def open_file(filename):
     try:
         with open(filename, "r") as file:
@@ -12,8 +12,8 @@ def open_file(filename):
     except json.JSONDecodeError:
         print("Error reading file. Data might be corrupted.")
         return []
-
-# Function to save student records to a file
+        
+#Function to save student records to a file
 def save_file(filename, records):
     with open(filename, "w") as file:
         json.dump(records, file)
